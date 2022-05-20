@@ -13,12 +13,12 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/:catchAll(.*)",
-    redirect: '/',
+    redirect: '/'
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(`${process.env.BASE_URL}/blogvue/`),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }
